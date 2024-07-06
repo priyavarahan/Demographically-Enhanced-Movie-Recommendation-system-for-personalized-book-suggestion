@@ -1,0 +1,38 @@
+import boto3
+import json
+
+def lambda_handler(event, context):
+    # Initialize the SageMaker runtime client
+    sage_client = boto3.client('runtime.sagemaker')
+
+    # The name of your SageMaker endpoint
+    endpoint_name = "sagemakerep"
+
+    # Extract user details from the event object
+    user_age = event.get('age')
+    user_genre = event.get('genre')
+    user_occupation = event.get('occupation')
+    user_name = event.get('name')
+    user_zipcode = event.get('zipcode')
+
+    # Prepare the input data for SageMaker endpoint
+    input_data = json.dumps({
+        "age": user_age,
+        "genre": user_genre,
+        "occupation": user_occupation,
+        "name": user_name,
+        "zipcode": user_zipcode
+    })
+
+    # Call the SageMaker endpoint
+    response = sage_client.invoke_endpoint(EndpointName=endpoint_name,
+                                           ContentType='application/json',
+                                           Body=input_data)
+
+    # Get the response and return it
+    result = json.loads(response['Body'].read().decode())
+
+    return {
+        'statusCode': 200,
+        'body': json.dumps(result)
+    }
