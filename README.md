@@ -3,8 +3,8 @@ Developed a movie recommendation system with AWS and machine learning to suggest
 
 The project focuses on identifying important features by analyzing the dataset, which is processed and cleaned using AWS Glue, PySpark, DataBrew, and Redshift. Machine learning algorithms, like K-Nearest-Neighbor, are applied for predicting book and movie recommendations using AWS SageMaker and Lambda functions.
 
-Movie dataset:https://www.tensorflow.org/datasets/catalog/movie_lens#movie_lens1m-ratings
-Book Dataset:https://www.kaggle.com/datasets/justinnguyen0x0x/best-books-of-the-21st-century-dataset
+Movie dataset: https://www.tensorflow.org/datasets/catalog/movie_lens#movie_lens1m-ratings
+Book Dataset: https://www.kaggle.com/datasets/justinnguyen0x0x/best-books-of-the-21st-century-dataset
 
 # System Architecture
 
