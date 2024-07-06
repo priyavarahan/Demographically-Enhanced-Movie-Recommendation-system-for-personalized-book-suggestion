@@ -6,5 +6,6 @@ The project focuses on identifying important features by analyzing the dataset, 
 Movie dataset:https://www.tensorflow.org/datasets/catalog/movie_lens#movie_lens1m-ratings
 Book Dataset:https://www.kaggle.com/datasets/justinnguyen0x0x/best-books-of-the-21st-century-dataset
 
-System Architecture
+# System Architecture
+
 ![image](https://github.com/priyavarahan/Demographically-Enhanced-Movie-Recommendation-system-for-personalized-book-suggestion/assets/174403766/cb5be81c-eee7-435a-ab6c-f11de414d6d9)
